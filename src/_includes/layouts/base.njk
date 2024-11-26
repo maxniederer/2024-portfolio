@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="/assets/css/reset.css" />
+
+    {# ionicons #}
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+      defer
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+      defer
+    ></script>
+
+    {# lenis #}
+    <script type="module" src="/assets/vendor/lenis/lenis.js" defer></script>
+    <link rel="stylesheet" href="/assets/vendor/lenis/lenis.css" />
+    <script type="module" src="/assets/js/scroll.js" defer></script>
+
+    <script type="module" src="/assets/js/links.js" defer></script>
+
+    <title>M*N</title>
+  </head>
+
+  <body>
+    {{ content | safe }}
+  </body>
+</html>

@@ -1,0 +1,25 @@
+{
+  "name": "webportfolio",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "sass --watch src/assets/sass:_site/assets/css",
+    "build:sass": "sass src/assets/sass:_site/assets/css",
+    "watch:eleventy": "eleventy --serve",
+    "build:eleventy": "eleventy",
+    "start": "npm-run-all build:sass --parallel watch:*",
+    "build": "npm-run-all build:*"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@11ty/eleventy": "github:11ty/eleventy",
+    "npm-run-all": "^4.1.5"
+  },
+  "dependencies": {
+    "lenis": "^1.1.16",
+    "sass": "^1.78.0"
+  }
+}

@@ -1,0 +1,62 @@
+---
+layout: layouts/base.njk
+---
+
+<div class="bio padding">
+  <header>
+    <div class="logo">
+      <span></span>
+      <h1>Max Niederer</h1>
+    </div>
+    <nav class="pagenav">
+      <ul>
+        <li>
+          <a href="#portfolio" id="portfolioanchor" class="active anchorlink"
+            ><span></span>Portfolio</a
+          >
+        </li>
+        <li>
+          <a href="#about" id="aboutanchor" class="anchorlink"
+            ><span></span>About</a
+          >
+        </li>
+        <li>
+          <a href="#contact" id="contactanchor" class="anchorlink"
+            ><span></span>Contact</a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button class="button hamburger hamburger-hidden" id="hamburger">
+      <span class="symbol" id="rotator2"></span>
+    </button>
+  </header>
+  <div class="blurb">
+    <p class="tagline">
+      <span class="symbol" id="rotator"></span>
+      I'm a front-end developer and designer based in Philadelphia.
+    </p>
+    <ul class="linknav">
+      <li>
+        <a class="linkemail button" href="mailto:">maxniederergvc@gmail.com</a>
+      </li>
+      <li>
+        <a class="linkicon button" href="">
+          <ion-icon name="logo-linkedin"></ion-icon>
+        </a>
+      </li>
+      <li>
+        <a class="linkicon button" href="">
+          <ion-icon name="logo-github"></ion-icon>
+        </a>
+      </li>
+    </ul>
+    {#
+    <p class="copyright">
+      &copy; <span id="copyrightyear">2024</span> Max Niederer
+    </p>
+    #}
+  </div>
+</div>
+
+<main class="padding">{{content | safe}}</main>

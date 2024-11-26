@@ -1,0 +1,30 @@
+<section id="portfolio">
+  <div>
+    {#
+    <h2>My Work</h2>
+    #}
+    <ul class="portfolio">
+      {%- for project in collections.project | sortByOrder -%} {% if not
+      project.data.draft %}
+      <li class="project">
+        <a
+          href="{{project.data.link}}"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
+        </a>
+        <div class="project-content">
+          <ul class="filters accent-text">
+            {%- for tag in project.data.filters -%}
+            <li class="">{{tag}}</li>
+            {%- endfor -%}
+          </ul>
+          <h3>{{project.data.title}}</h3>
+          <p class="project-desc">{{project.data.desc}}</p>
+        </div>
+      </li>
+      {% endif %} {%- endfor -%}
+    </ul>
+  </div>
+</section>
