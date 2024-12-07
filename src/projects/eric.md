@@ -8,16 +8,7 @@ gitLink: https://github.com/maxniederer/eric-trimbur-portfolio
 filters:
   - cms
   - front-end
-  - design
+  - figma
 draft: false
-order: 98
+order: 100
 ---
-
-### Tech Stack
-
-- **11ty**: for generating the static website
-- **Bootstrap**: for basic styling
-- **SASS**: for advanced styling
-- **Netlify**: for deployment
-- **Decap CMS**: for content management
-- **Github**: for version control & Netlify setup
