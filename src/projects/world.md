@@ -11,9 +11,3 @@ filters:
 order: 4
 draft: true
 ---
-
-### Tech Stack
-
-- **HTML**
-- **CSS**
-- **JS**
