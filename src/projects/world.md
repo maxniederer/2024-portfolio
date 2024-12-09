@@ -1,6 +1,6 @@
 ---
 title: Where in the World?
-desc: A project which implments the Rest Countries API and dynamic routing using vanilla JS. Original design from Frontend Mentor.
+desc: A project which implements the Rest Countries API and dynamic routing using vanilla JS. Original design from Frontend Mentor.
 image: /assets/img/FEM.webp
 imageAlt: two screenshots, one showcasing a grid of country flags and the other showing details and statistics for one country
 link: https://maxniederer.github.io/demos/world/
