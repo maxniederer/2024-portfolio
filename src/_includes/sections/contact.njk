@@ -2,17 +2,25 @@
   <div>
     <h2>Contact</h2>
     <p>
-      Feel free to contact me for any reason. I'm available through email or
-      this form.
+      Feel free to contact me for any reason. You can email me directly or you
+      can fill out this form, which will also send me an email.
     </p>
-    <form name="contact" netlify>
-      <input type="text" name="name" placeholder="Name (and pronouns)" />
-      <input type="email" name="email" placeholder="Email" />
-      <textarea
-        type="message"
-        name="message"
-        placeholder="Message..."
-      ></textarea>
+    <form name="contact" netlify-honeypot="favorite_color" netlify>
+      <div>
+        <input type="text" name="name" placeholder="Name (and pronouns)" />
+        <input type="email" name="email" placeholder="Email" />
+        <input
+          class="hidden"
+          type="text"
+          name="favorite_color"
+          placeholder="Leave this empty if you are human. Otherwise, list your favorite color."
+        />
+        <textarea
+          type="message"
+          name="message"
+          placeholder="Message..."
+        ></textarea>
+      </div>
       <button type="submit" class="button submit">Send</button>
     </form>
   </div>

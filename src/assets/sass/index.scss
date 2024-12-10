@@ -352,10 +352,12 @@ h3 {
 //------------
 
 form {
-  display: grid;
-  width: 100%;
-  gap: 8px;
   margin-top: 16px;
+  & > div {
+    display: grid;
+    width: 100%;
+    gap: 8px;
+  }
 }
 
 input,
@@ -379,6 +381,7 @@ textarea {
   color: var(--color-dark);
   min-height: 48px;
   // display: inline-block;
+  padding-inline: 30px;
 }
 
 .submit:hover {
@@ -417,4 +420,8 @@ textarea {
   top: 0;
   left: 0;
   background-color: var(--color-light);
+}
+
+.hidden {
+  display: none;
 }
