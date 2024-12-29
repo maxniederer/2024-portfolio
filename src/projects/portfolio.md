@@ -6,6 +6,7 @@ imageAlt: a landing page split in two halves, one light theme and one dark theme
 link: https://max-niederer-portfolio.netlify.app/
 gitLink: https://github.com/maxniederer/max-niederer-portfolio
 filters:
+  - eleventy
   - front-end
   - figma
 order: 99
