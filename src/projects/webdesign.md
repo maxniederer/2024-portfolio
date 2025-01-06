@@ -1,12 +1,12 @@
 ---
-title: West Chester Web Design
-desc: A landing page design for a web design freelance LLC.
+title: Shortly
+desc: My implementation of a Figma design from Frontend Mentor using React and TSX.
 image: /assets/img/p5.png
 imageAlt: ALT
-link: https://maxniederer.github.io/demos/world/
-gitLink: https://github.com/maxniederer/room-homepage
+link:
+gitLink:
 draft: true
 filters:
-  - figma
-order: 200
+  - front-end
+order: 98
 ---

@@ -11,5 +11,5 @@ filters:
   - front-end
   - figma
 draft: false
-order: 3
+order: 2
 ---
