@@ -17,8 +17,18 @@
         <div class="project-content">
           <ul class="filters accent-text">
             {%- for tag in project.data.filters -%}
-            <li class="">{{tag}}</li>
+            <li>{{tag}}</li>
             {%- endfor -%}
+            <li class="git">
+              <a
+                href="{{project.data.gitLink}}"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="visit code repository"
+              >
+                <ion-icon name="logo-github"></ion-icon>
+              </a>
+            </li>
           </ul>
           <h3>{{project.data.title}}</h3>
           <p class="project-desc">{{project.data.desc}}</p>
