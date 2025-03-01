@@ -1,15 +1,16 @@
 ---
 title: Eric Trimbur
-desc: Eric's personal website hosts his project writeups and blogs. I used Eleventy as the static site generator, Decap CMS for git content management, and Netlify for hosting.
+desc: Eric wanted to stop paying for Squarespace, so I designed and built him a website. He wanted a place to host his project writeups and blog posts, so I used Eleventy as the static site generator with Decap CMS for easy content management. I used Netlify for hosting and configured his existing domain with Squarespace DNS to link to his new, free site.
 image: /assets/img/P2.png
-imageAlt: a green landing page with purple text
-link: https://eric-trimbur-portfolio.netlify.app/
+imageAlt: a clean, professional-looking list of eric's projects
+link: https://erictrimbur.com/
 gitLink: https://github.com/maxniederer/eric-trimbur-portfolio
 filters:
-  - cms
+  - front-end dev
   - eleventy
-  - front-end
+  - cms
+  - dns
   - figma
-draft: false
-order: 2
+year: 2025
+order: 1
 ---

@@ -1,15 +1,15 @@
 ---
 title: Where in the World?
-desc: A project which implements the REST Countries API and dynamic routing using React and TSX. Original Figma design from Frontend Mentor.
+desc: A challenge project where I developed a Figma design from Frontend Mentor as pixel-perfect as possible. For this project I implemented the REST Countries API and used React Router with TypeScript for dynamic routing.
 image: /assets/img/FEM.webp
-imageAlt: two screenshots, one showcasing a grid of country flags and the other showing details and statistics for one country
+imageAlt: a grid of country flags
 link: https://where-in-the-world-react-demo.netlify.app/
-gitLink: https://github.com/maxniederer/room-homepage
+gitLink: https://github.com/maxniederer/rest-countries-react
 filters:
+  - front-end dev
+  - rest api
   - react
   - typescript
-  - rest api
-  - front-end
-order: 1
-draft: false
+year: 2024
+order: 2
 ---

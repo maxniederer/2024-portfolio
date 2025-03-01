@@ -8,20 +8,23 @@
       project.data.draft %}
       <li class="project">
         <a
-          href="{{project.data.link}}"
+          href="{{ project.data.link }}"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <img src="{{project.data.image}}" alt="{{project.data.imageAlt}}" />
+          <img
+            src="{{ project.data.image }}"
+            alt="{{ project.data.imageAlt }}"
+          />
         </a>
         <div class="project-content">
           <ul class="filters accent-text">
             {%- for tag in project.data.filters -%}
-            <li>{{tag}}</li>
+            <li>{{ tag }}</li>
             {%- endfor -%}
             <li class="git">
               <a
-                href="{{project.data.gitLink}}"
+                href="{{ project.data.gitLink }}"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="visit code repository"
@@ -30,8 +33,9 @@
               </a>
             </li>
           </ul>
-          <h3>{{project.data.title}}</h3>
-          <p class="project-desc">{{project.data.desc}}</p>
+          <h3>{{ project.data.title }}</h3>
+          <p class="project-desc">{{ project.data.desc }}</p>
+          <p class="accent-text">{{ project.data.year }}</p>
         </div>
       </li>
       {% endif %} {%- endfor -%}

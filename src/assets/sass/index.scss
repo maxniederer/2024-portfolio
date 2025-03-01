@@ -42,7 +42,7 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1050px) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -66,7 +66,7 @@ p {
     padding-bottom: 60px;
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
     padding-inline: 70px;
     padding-block: 90px 0px;
     &.bio {
@@ -85,7 +85,7 @@ p {
   justify-content: space-between;
   height: 100vh;
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1050px) {
     position: sticky;
     top: 0;
   }
@@ -164,11 +164,12 @@ p {
 }
 
 .tagline {
+  line-height: 1.4;
   font-size: 28 / 16 * 1em;
   margin-bottom: 16px;
   text-wrap: balance;
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
     font-size: 40 / 16 * 1em;
   }
 }
@@ -182,14 +183,14 @@ p {
   display: inline-block;
   background-image: url("../img/star.svg");
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
     width: 40px;
   }
 }
 
 .button {
   cursor: pointer;
-  border-radius: 1000px;
+  border-radius: 500px;
   transition-property: color, background-color, border-color;
   transition-duration: 200ms;
 }
@@ -229,15 +230,15 @@ p {
     }
   }
 
-  @media (min-width: 500px) {
+  @media (min-width: 550px) {
     height: 48px;
     padding-inline: 30px;
   }
 }
 
 li:has(.linkemail) {
-  @media (max-width: 600px) {
-    margin-right: 150px;
+  @media (width < 1100px) {
+    // margin-right: 2000px;
   }
 }
 
@@ -261,7 +262,7 @@ section {
   display: grid;
 
   // margin-inline: auto;
-  @media (min-width: 1100px) {
+  @media (min-width: 1050px) {
     margin-left: 0;
   }
 
@@ -350,7 +351,7 @@ h3 {
 
   margin-top: 26px;
   // margin-inline: auto;
-  @media (min-width: 1100px) {
+  @media (min-width: 1050px) {
     margin-left: 0;
   }
   img {
@@ -406,7 +407,7 @@ textarea {
   bottom: 60px;
   right: 8vw;
 
-  @media (min-width: 1100px) {
+  @media (min-width: 1050px) {
     display: none;
   }
 
