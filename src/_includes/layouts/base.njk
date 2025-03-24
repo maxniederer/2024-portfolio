@@ -3,9 +3,10 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
 
     <!-- styles -->
-    <link rel="stylesheet" href="/assets/css/index.css" />
+    <link rel="stylesheet" href="{{ '/assets/css/' + stylesheet }}" />
     <link rel="stylesheet" href="/assets/css/reset.css" />
 
     <!-- ionicons -->
@@ -24,6 +25,12 @@
     <script type="module" src="/assets/vendor/lenis/lenis.js" defer></script>
     <link rel="stylesheet" href="/assets/vendor/lenis/lenis.css" />
     <script type="module" src="/assets/js/scroll.js" defer></script>
+
+    <!-- lightbox -->
+    <link rel="stylesheet" href="/assets/vendor/lightbox/css/lightbox.css" />
+    {#
+    <script type="module" src="/assets/js/scroll.js" defer></script>
+    #}
 
     <!-- favicon -->
     <link

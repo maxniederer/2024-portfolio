@@ -21,7 +21,7 @@
           <ul class="filters accent-text">
             {%- for tag in project.data.filters -%}
             <li>{{ tag }}</li>
-            {%- endfor -%}
+            {%- endfor -%} {% if project.data.gitLink %}
             <li class="git">
               <a
                 href="{{ project.data.gitLink }}"
@@ -32,6 +32,7 @@
                 <ion-icon name="logo-github"></ion-icon>
               </a>
             </li>
+            {% endif %}
           </ul>
           <h3>{{ project.data.title }}</h3>
           <p class="project-desc">{{ project.data.desc }}</p>

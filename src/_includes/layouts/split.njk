@@ -34,7 +34,7 @@ layout: layouts/base.njk
   <div class="blurb">
     <p class="tagline">
       <span class="symbol" id="rotator"></span>
-      I'm a front-end developer and designer based in PA.
+      I'm a front-end developer and designer based in the US.
     </p>
     <ul class="linknav">
       <li>
@@ -42,21 +42,23 @@ layout: layouts/base.njk
           >maxniederergvc@gmail.com</a
         >
       </li>
-      <li>
-        <a
-          class="linkicon button"
-          href="https://www.linkedin.com/in/maxwell-niederer/"
-        >
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </li>
-      <li>
-        <a class="linkicon button" href="https://github.com/maxniederer">
-          <ion-icon name="logo-github"></ion-icon>
-        </a>
-      </li>
+      <ul class="linknav">
+        <li>
+          <a
+            class="linkicon button"
+            href="https://www.linkedin.com/in/maxwell-niederer/"
+          >
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a>
+        </li>
+        <li>
+          <a class="linkicon button" href="https://github.com/maxniederer">
+            <ion-icon name="logo-github"></ion-icon>
+          </a>
+        </li>
+      </ul>
     </ul>
   </div>
 </div>
 
-<main class="padding">{{content | safe}}</main>
+<main class="padding">{{ content | safe }}</main>

@@ -8,6 +8,8 @@ module.exports = function (eleventyConfig) {
   }
   eleventyConfig.addFilter("sortByOrder", sortByOrder);
 
+  eleventyConfig.addPassthroughCopy({ "src/robots.txt": "/robots.txt" });
+
   return {
     dir: {
       input: "src",

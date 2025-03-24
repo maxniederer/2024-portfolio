@@ -1,34 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Anybody:ital,wght@0,100..900;1,100..900&display=swap");
-
-@font-face {
-  font-family: "PPMori";
-  src: url("../fonts/PPMori-VariableVF.woff2")
-    format("woff2 supports variations");
-  src: url("../fonts/PPMori-VariableVF.woff2") format("woff2-variations");
-  font-weight: 100 1000;
-  font-style: normal;
-  font-display: swap;
-}
-
-:root {
-  --font: "PPMori", sans-serif;
-
-  --color-light: hsl(60, 8%, 92%);
-  --color-dark: hsl(60, 1%, 15%);
-  --color-accent: hsl(0, 10%, 57%);
-  --color-gray: hsl(48, 10%, 55%);
-  --color-blue: hsl(196, 11%, 19%);
-
-  // --color-light: hsl(60, 1%, 15%);
-  // --color-dark: hsl(60, 8%, 95%);
-  // --color-accent: hsl(0, 12%, 68%);
-  // --color-gray: hsl(48, 10%, 70%);
-}
-
-::selection {
-  background-color: var(--color-gray);
-  color: var(--color-light);
-}
+@use "shared.scss";
 
 html[data-theme="light"] {
   --color-light: #eee;
@@ -42,7 +12,7 @@ body {
   color: var(--color-dark);
   background-color: var(--color-light);
 
-  @media (min-width: 1050px) {
+  @media (min-width: 800px) {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -60,19 +30,27 @@ p {
 }
 
 .padding {
-  padding-inline: clamp(30px, 15px + 5vw, 40px);
-  padding-block: 60px 0px;
+  padding-inline: clamp(30px, 8vw, 50px);
+  padding-block: clamp(50px, 9vw, 60px) 0px;
   &.bio {
     padding-bottom: 60px;
   }
 
-  @media (min-width: 550px) {
+  @media (min-width: 1100px) {
     padding-inline: 70px;
     padding-block: 90px 0px;
     &.bio {
       padding-bottom: 90px;
     }
   }
+
+  // @media (min-width: 550px) {
+  //   padding-inline: 70px;
+  //   padding-block: 90px 0px;
+  //   &.bio {
+  //     padding-bottom: 90px;
+  //   }
+  // }
 }
 
 //------------
@@ -85,7 +63,7 @@ p {
   justify-content: space-between;
   height: 100vh;
 
-  @media (min-width: 1050px) {
+  @media (min-width: 800px) {
     position: sticky;
     top: 0;
   }
@@ -128,6 +106,17 @@ p {
 
     color: var(--color-gray);
 
+    &.active,
+    &:hover,
+    &:focus {
+      color: var(--color-dark);
+
+      span {
+        width: 50px;
+        background-color: var(--color-dark);
+      }
+    }
+
     span {
       height: 1px;
       width: 24px;
@@ -135,16 +124,6 @@ p {
 
       transition-property: width, background-color;
       transition-duration: 200ms;
-    }
-  }
-
-  a.active,
-  a:hover {
-    color: var(--color-dark);
-
-    span {
-      width: 50px;
-      background-color: var(--color-dark);
     }
   }
 }
@@ -158,13 +137,14 @@ p {
   display: grid;
   place-items: center;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-dark);
   }
 }
 
 .tagline {
-  line-height: 1.4;
+  line-height: 1.3;
   font-size: 28 / 16 * 1em;
   margin-bottom: 16px;
   text-wrap: balance;
@@ -199,40 +179,48 @@ p {
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-}
 
-.linknav a {
-  display: grid;
-  place-items: center;
-  padding-inline: 26px;
-  height: 40px;
-  color: var(--color-dark);
-  border: 1px solid var(--color-dark);
+  a {
+    display: grid;
+    place-items: center;
+    padding-inline: 18px;
+    height: 40px;
+    color: var(--color-dark);
+    border: 1px solid var(--color-dark);
 
-  &:hover {
-    color: var(--color-gray);
-    border-color: var(--color-gray);
-  }
-
-  &.linkicon {
-    padding-inline: 0;
-    aspect-ratio: 1;
-    font-size: 1.3em;
-  }
-
-  &.linkemail {
-    background-color: var(--color-dark);
-    color: var(--color-light);
-    border: none;
-
-    &:hover {
-      background-color: var(--color-gray);
+    @media (min-width: 550px) {
+      padding-inline: 26px;
     }
-  }
 
-  @media (min-width: 550px) {
-    height: 48px;
-    padding-inline: 30px;
+    &:hover,
+    &:focus {
+      color: var(--color-gray);
+      border-color: var(--color-gray);
+    }
+
+    &.linkicon {
+      padding-inline: 0;
+      aspect-ratio: 1;
+      font-size: 1.3em;
+    }
+
+    &.linkemail {
+      background-color: var(--color-dark);
+      color: var(--color-light);
+      border: 1px solid var(--color-dark);
+      // border: none;
+
+      &:hover,
+      &:focus {
+        background-color: var(--color-light);
+        color: var(--color-dark);
+      }
+    }
+
+    @media (min-width: 550px) {
+      height: 48px;
+      padding-inline: 30px;
+    }
   }
 }
 
@@ -262,12 +250,15 @@ section {
   display: grid;
 
   // margin-inline: auto;
-  @media (min-width: 1050px) {
+  @media (min-width: 800px) {
     margin-left: 0;
   }
 
   &:has(+ section) {
-    margin-bottom: 600px;
+    margin-bottom: 200px;
+    @media (min-width: 800px) {
+      margin-bottom: 600px;
+    }
   }
 
   & > div {
@@ -303,7 +294,8 @@ h3 {
   top: 4px;
   transition-property: color;
   transition-duration: 200ms;
-  &:hover {
+  &:hover,
+  &:focus {
     color: var(--color-light);
   }
 }
@@ -311,6 +303,14 @@ h3 {
 .project {
   &:has(+ .project) {
     margin-bottom: 60px;
+  }
+  a:has(img) {
+    transition-property: filter;
+    transition-duration: 200ms;
+    &:hover,
+    &:focus {
+      filter: brightness(0.8);
+    }
   }
 }
 
@@ -324,7 +324,7 @@ h3 {
   margin-top: 20px;
 
   li {
-    display: inline;
+    display: inline-block;
     text-transform: uppercase;
     margin-right: 8px;
   }
@@ -351,7 +351,7 @@ h3 {
 
   margin-top: 26px;
   // margin-inline: auto;
-  @media (min-width: 1050px) {
+  @media (min-width: 800px) {
     margin-left: 0;
   }
   img {
@@ -378,8 +378,17 @@ textarea {
   border: none;
   border-bottom: 1px solid var(--color-light);
   color: var(--color-light);
-  padding: 2px;
+  padding: 1px;
   padding-block: 8px;
+
+  &::placeholder {
+    opacity: 0.5;
+  }
+}
+
+label {
+  padding-inline: 1px;
+  margin-bottom: 8px;
 }
 
 textarea {
@@ -394,11 +403,13 @@ textarea {
   min-height: 48px;
   // display: inline-block;
   padding-inline: 30px;
-}
+  border: 1px solid var(--color-light);
 
-.submit:hover {
-  background-color: var(--color-gray);
-  color: var(--color-light);
+  &:hover,
+  &:focus {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+  }
 }
 
 .hamburger {
@@ -407,7 +418,7 @@ textarea {
   bottom: 60px;
   right: 8vw;
 
-  @media (min-width: 1050px) {
+  @media (min-width: 800px) {
     display: none;
   }
 

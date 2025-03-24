@@ -1,0 +1,29 @@
+@font-face {
+  font-family: "PPMori";
+  src: url("../fonts/PPMori-VariableVF.woff2")
+    format("woff2 supports variations");
+  src: url("../fonts/PPMori-VariableVF.woff2") format("woff2-variations");
+  font-weight: 100 1000;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  --font: "PPMori", sans-serif;
+
+  --color-light: hsl(60, 8%, 92%);
+  --color-dark: hsl(60, 1%, 15%);
+  --color-accent: hsl(0, 10%, 57%);
+  --color-gray: hsl(48, 10%, 55%);
+  --color-blue: hsl(196, 11%, 19%);
+
+  // --color-light: hsl(60, 1%, 15%);
+  // --color-dark: hsl(60, 8%, 95%);
+  // --color-accent: hsl(0, 12%, 68%);
+  // --color-gray: hsl(48, 10%, 70%);
+}
+
+::selection {
+  background-color: var(--color-gray);
+  color: var(--color-light);
+}
