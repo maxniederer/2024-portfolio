@@ -13,14 +13,21 @@
 
   --color-light: hsl(60, 8%, 92%);
   --color-dark: hsl(60, 1%, 15%);
-  --color-accent: hsl(0, 10%, 57%);
   --color-gray: hsl(48, 10%, 55%);
-  --color-blue: hsl(196, 11%, 19%);
 
-  // --color-light: hsl(60, 1%, 15%);
-  // --color-dark: hsl(60, 8%, 95%);
-  // --color-accent: hsl(0, 12%, 68%);
-  // --color-gray: hsl(48, 10%, 70%);
+  --color-bg: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-btn: var(--color-dark);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-gray: #b1ab98;
+
+    --color-bg: hsl(60, 4%, 25%);
+    --color-text: var(--color-light);
+    --color-btn: var(--color-gray);
+  }
 }
 
 ::selection {

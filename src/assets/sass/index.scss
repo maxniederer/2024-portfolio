@@ -9,8 +9,8 @@ body {
   font-family: var(--font);
   font-weight: 350;
 
-  color: var(--color-dark);
-  background-color: var(--color-light);
+  color: var(--color-text);
+  background-color: var(--color-bg);
 
   @media (min-width: 800px) {
     display: grid;
@@ -81,7 +81,7 @@ p {
   width: 26px;
   aspect-ratio: 1;
   display: block;
-  background-color: var(--color-dark);
+  background-color: var(--color-text);
   mask-repeat: no-repeat;
   mask-position: center;
 }
@@ -109,11 +109,11 @@ p {
     &.active,
     &:hover,
     &:focus {
-      color: var(--color-dark);
+      color: var(--color-text);
 
       span {
         width: 50px;
-        background-color: var(--color-dark);
+        background-color: var(--color-text);
       }
     }
 
@@ -162,6 +162,9 @@ p {
 
   display: inline-block;
   background-image: url("../img/star.svg");
+  @media (prefers-color-scheme: dark) {
+    filter: brightness(1.2) contrast(0.9);
+  }
 
   @media (min-width: 550px) {
     width: 40px;
@@ -183,10 +186,10 @@ p {
   a {
     display: grid;
     place-items: center;
-    padding-inline: 18px;
+    padding-inline: 22px;
     height: 40px;
-    color: var(--color-dark);
-    border: 1px solid var(--color-dark);
+    color: var(--color-text);
+    border: 1px solid var(--color-text);
 
     @media (min-width: 550px) {
       padding-inline: 26px;
@@ -205,15 +208,16 @@ p {
     }
 
     &.linkemail {
-      background-color: var(--color-dark);
-      color: var(--color-light);
-      border: 1px solid var(--color-dark);
+      background-color: var(--color-btn);
+      color: var(--color-bg);
+      border: 1px solid var(--color-btn);
       // border: none;
 
       &:hover,
       &:focus {
-        background-color: var(--color-light);
-        color: var(--color-dark);
+        background-color: var(--color-bg);
+        color: var(--color-text);
+        border-color: var(--color-text);
       }
     }
 
@@ -368,7 +372,7 @@ form {
   & > div {
     display: grid;
     width: 100%;
-    gap: 8px;
+    gap: 6px;
   }
 }
 
@@ -376,9 +380,11 @@ input,
 textarea {
   background: none;
   border: none;
-  border-bottom: 1px solid var(--color-light);
-  color: var(--color-light);
-  padding: 1px;
+  // border: 1px dotted var(--color-gray);
+  background-color: var(--color-bg);
+  border-radius: 2px;
+  color: var(--color-text);
+  padding: 6px;
   padding-block: 8px;
 
   &::placeholder {
@@ -387,8 +393,8 @@ textarea {
 }
 
 label {
-  padding-inline: 1px;
-  margin-bottom: 8px;
+  // padding-inline: 1px;
+  margin-top: 16px;
 }
 
 textarea {
@@ -445,6 +451,6 @@ textarea {
   background-color: var(--color-light);
 }
 
-.hidden {
+.delicious {
   display: none;
 }

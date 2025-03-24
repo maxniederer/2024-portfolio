@@ -7,27 +7,27 @@
     </p>
     <form name="contact" netlify-honeypot="favorite_color" netlify>
       <div>
-        <input type="text" name="name" placeholder="Name..." id="name" />
         <label for="name">Name (and pronouns)</label>
-        <input type="email" name="email" placeholder="Email..." id="email" />
+        <input type="text" name="name" placeholder="Name..." id="name" />
         <label for="email">Email</label>
+        <input type="email" name="email" placeholder="Email..." id="email" />
+        <label class="delicious" for="color"
+          >List your favorite color (required)</label
+        >
         <input
-          class="hidden"
+          class="delicious"
           type="text"
           name="favorite_color"
           placeholder="List your favorite color."
           id="color"
         />
-        <label class="hidden" for="color"
-          >List your favorite color (required)</label
-        >
+        <label for="message">Message</label>
         <textarea
           type="message"
           name="message"
           placeholder="Message..."
           id="message"
         ></textarea>
-        <label for="message">Message</label>
       </div>
       <button type="submit" class="button submit">Send</button>
     </form>
